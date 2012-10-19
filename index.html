@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/diy_menu.css" media="all" />
+	<!--[if !IE]><!-->
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript" src="js/diy_menu.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var opts = {
+					data: [
+						[
+							{
+								text: '围观万戈的博客（Life Studio）',
+								url: 'http://wange.im'
+							},
+							{
+								text: '围观我的 SNS 们',
+								sub: [
+									{
+										text: '收听万戈的腾讯微博（@wange1228）',
+										url: 'http://t.qq.com/wange1228',
+										icon: 'images/icons/tencent.png'
+									},
+									{
+										text: '收听万戈的 Twitter（@wange1228）',
+										url: 'http://twitter.com/wange1228',
+										icon: 'images/icons/twitter.png'
+									},
+									{
+										text: '收听万戈的 Facebook（@wange1228）',
+										url: 'http://facebook.com/wange1228',
+										icon: 'images/icons/facebook.png'
+									}
+								]
+							}
+						],			// 第一组数据
+						[
+							{
+								text: '万戈，前端开发工程师一枚'
+							},
+							{
+								text: '在线联系 o(∩_∩)o',
+								url: 'http://wange.im/gtalk/'
+							},
+							{
+								text: '给我写信 ^_^',
+								url: 'mailto:i@wange.im',
+								icon: 'images/icons/mail.png'
+							}
+						],			// 第二组数据
+						[
+							{
+								text: '返回',
+								fn: function() {
+									window.history.go(-1);
+								}
+							},
+							{
+								text: '重新载入',
+								fn: function() {
+									window.location.reload();
+								}
+							},
+							{
+								text: '打印',
+								fn: function() {
+									window.print();
+								}
+							}
+						]			// 第三组数据
+					]
+				}
+				var menu = new DiyMenu();
+				menu.init(opts);
+			})
+		</script>
+
+	<!--<![endif]-->
+	<title>模拟右键菜单</title>
+</head>
+<body style="height:2500px;">
+	<p>鼠标右键看效果哟，不支持 IE!</p>
+</body>
+</html>
